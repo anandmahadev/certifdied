@@ -1,19 +1,19 @@
 import app from './app.js';
 import mongoose from 'mongoose';
+import { config, validateConfig } from './config/index.js';
 
-const PORT = process.env.PORT || 5000;
-const MONGODB_URI = process.env.MONGODB_URI;
-
-if (!MONGODB_URI) {
-  console.error('Critical Error: MONGODB_URI is not defined in environment variables.');
+try {
+  validateConfig();
+} catch (error: any) {
+  console.error('Critical Configuration Error:', error.message);
   process.exit(1);
 }
 
-mongoose.connect(MONGODB_URI)
+mongoose.connect(config.mongodbUri)
   .then(() => {
     console.log('Successfully connected to MongoDB');
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
+    app.listen(config.port, () => {
+      console.log(`Server is running on port ${config.port}`);
     });
   })
   .catch((err) => {
