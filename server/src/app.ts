@@ -4,10 +4,13 @@ import dotenv from 'dotenv';
 
 import routes from './routes/index.js';
 
+import { logger } from './middleware/logger.js';
+
 dotenv.config();
 
 const app = express();
 
+app.use(logger);
 app.use(cors());
 app.use(express.json());
 
