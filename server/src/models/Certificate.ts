@@ -20,6 +20,15 @@ const CertificateSchema = new mongoose.Schema({
     enum: ['Generated', 'Sent', 'Failed'],
     default: 'Generated'
   },
+  certificateId: {
+    type: String,
+    unique: true,
+    required: true
+  },
+  issuedAt: {
+    type: Date,
+    default: Date.now
+  },
   sentAt: Date,
   errorMessage: String
 }, { timestamps: true });
