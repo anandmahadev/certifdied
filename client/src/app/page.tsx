@@ -107,12 +107,46 @@ export default function Home() {
       </main>
 
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t font-medium text-sm text-slate-500">
-        <p>© 2026 CertifyPro Inc. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="hover:underline underline-offset-4" href="#">Terms of Service</Link>
-          <Link className="hover:underline underline-offset-4" href="#">Privacy</Link>
-        </nav>
+      <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <Link className="font-bold text-2xl tracking-tighter text-white" href="/">
+                CertifyPro
+              </Link>
+              <p className="max-w-xs text-center md:text-left text-sm opacity-80">
+                The world's most trusted platform for professional certificate automation and delivery.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-10">
+              <div className="flex flex-col gap-3">
+                <h4 className="text-white font-semibold mb-1">Product</h4>
+                <Link className="hover:text-white transition-colors text-sm" href="#">Features</Link>
+                <Link className="hover:text-white transition-colors text-sm" href="#">Templates</Link>
+                <Link className="hover:text-white transition-colors text-sm" href="#">Pricing</Link>
+              </div>
+              <div className="flex flex-col gap-3">
+                <h4 className="text-white font-semibold mb-1">Company</h4>
+                <Link className="hover:text-white transition-colors text-sm" href="#">About Us</Link>
+                <Link className="hover:text-white transition-colors text-sm" href="#">Careers</Link>
+                <Link className="hover:text-white transition-colors text-sm" href="#">Contact</Link>
+              </div>
+              <div className="flex flex-col gap-3">
+                <h4 className="text-white font-semibold mb-1">Legal</h4>
+                <Link className="hover:text-white transition-colors text-sm" href="#">Privacy Policy</Link>
+                <Link className="hover:text-white transition-colors text-sm" href="#">Terms of Service</Link>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium tracking-wide">
+            <p>© 2026 CertifyPro Inc. All rights reserved.</p>
+            <div className="flex gap-6">
+              <Link className="hover:text-white transition-colors" href="#">Twitter</Link>
+              <Link className="hover:text-white transition-colors" href="#">LinkedIn</Link>
+              <Link className="hover:text-white transition-colors" href="#">GitHub</Link>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
