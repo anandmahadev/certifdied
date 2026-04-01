@@ -2,6 +2,13 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "description": "Frontend for CertifyPro - Automated Certificate Generation Platform",
+  "keywords": [
+    "nextjs",
+    "react",
+    "certificate-generation",
+    "pdf"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
