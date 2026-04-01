@@ -10,6 +10,14 @@ CertifyPro is an automated certificate generation and delivery platform designed
 - **Verification System**: Each certificate includes a unique ID and optional QR code for public verification.
 - **Modern Dashboard**: Intuitive interface for managing templates, students, and history.
 
+## Architecture Overview
+
+CertifyPro follows a modern decoupled architecture:
+
+- **Client**: A React-based frontend built with Next.js 15, utilizing the App Router for efficient server-side rendering and client-side navigation.
+- **Server**: A robust RESTful API built with Express.js and Node.js, managing business logic, PDF generation, and database interactions.
+- **Database**: MongoDB serves as the primary data store, providing flexibility for certificate templates and recipient data.
+
 ## Tech Stack
 
 ### Frontend
