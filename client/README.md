@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is the frontend client for CertifyPro, built with [Next.js](https://nextjs.org).
+
+## Project Overview
+
+This client provides the user interface for managing automated certificate generation, recipient management, and viewing generation history.
+
+## Core Technologies
+
+- **Next.js 15+**: Modern web framework with App Router support.
+- **TailwindCSS**: Utility-first CSS framework for rapid UI development.
+- **TypeScript**: Ensuring type safety throughout the codebase.
 
 ## Getting Started
 
