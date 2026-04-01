@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
+  "description": "Backend API for CertifyPro - Handling certificate management, PDF generation, and email delivery",
   "main": "dist/server.js",
   "scripts": {
     "dev": "npm run build && node dist/server.js",
