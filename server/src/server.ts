@@ -11,10 +11,8 @@ try {
 
 mongoose.connect(config.mongodbUri)
   .then(() => {
-    console.log('--------------------------------------------');
-    console.log('   CertifyPro Backend - Database Connected   ');
-    console.log(`   Running on port ${config.port}           `);
-    console.log('--------------------------------------------');
+    console.log('✅ Database Connected Successfully');
+    console.log(`🚀 Server starting on port ${config.port}...`);
     app.listen(config.port, () => {
       console.log(`Server is running on port ${config.port}`);
     });
