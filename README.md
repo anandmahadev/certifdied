@@ -25,6 +25,20 @@ CertifyPro follows a modern decoupled architecture:
 - **Server**: A robust RESTful API built with Express.js and Node.js, managing business logic, PDF generation, and database interactions.
 - **Database**: MongoDB serves as the primary data store, providing flexibility for certificate templates and recipient data.
 
+## Project Structure
+
+```text
+certifdied/
+├── client/          # Next.js 15 Frontend
+│   ├── src/         # React components & hooks
+│   └── public/      # Static assets
+├── server/          # Express.js Backend
+│   ├── src/         # API routes, models & services
+│   └── dist/        # Compiled JS
+├── CONTRIBUTING.md  # Guidelines for contributors
+└── README.md        # Project documentation
+```
+
 ## Tech Stack
 
 ### Frontend
