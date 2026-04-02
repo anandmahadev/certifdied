@@ -17,7 +17,10 @@ app.use(express.json());
 app.use('/api', routes);
 
 app.get('/', (req, res) => {
-  res.send('CertifyPro API is running');
+  res.json({ 
+    message: 'CertifyPro API is active',
+    version: '1.0.0'
+  });
 });
 
 export default app;
