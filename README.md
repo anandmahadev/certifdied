@@ -1,5 +1,12 @@
 # CertifyPro
 
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.0-38B2AC?style=flat-square&logo=tailwind-css)
+![Node.js](https://img.shields.io/badge/Node.js-18-green?style=flat-square&logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-5.0-lightgrey?style=flat-square&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-8.0-green?style=flat-square&logo=mongodb)
+
 CertifyPro is an automated certificate generation and delivery platform designed for educational institutions, event organizers, and businesses.
 
 ## Features
@@ -56,5 +63,21 @@ CertifyPro follows a modern decoupled architecture:
    - Server: `cd server && npm run dev`
    - Client: `cd client && npm run dev`
 
+
+## Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/anandmahadev/certifdied.git
+cd certifdied
+
+# Install dependencies and start server
+cd server && npm install && npm run dev &
+
+# Install dependencies and start client
+cd ../client && npm install && npm run dev
+```
+
 ## License
 MIT
+
