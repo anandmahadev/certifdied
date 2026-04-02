@@ -20,3 +20,7 @@ Thank you for your interest in contributing to CertifyPro!
 ## Reporting Issues
 
 If you find a bug or have a feature request, please open an issue on the GitHub repository.
+
+## Security
+
+If you discover any security-related issues, please avoid using the public issue tracker. Instead, send an email to the repository owner.
