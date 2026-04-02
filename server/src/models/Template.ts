@@ -14,6 +14,10 @@ const TemplateSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  description: {
+    type: String,
+    default: ""
+  },
   fields: [{
     key: String, // {name}, {event}, {date}
     x: Number,
