@@ -4,11 +4,12 @@ Thank you for your interest in contributing to CertifyPro!
 
 ## How to Contribute
 
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Make your changes and commit them with clear messages.
-4. Push your changes to your fork.
-5. Submit a pull request.
+1. Fork the repository and clone it locally.
+2. Create a new branch for your feature or bugfix: `git checkout -b feature/my-feature`.
+3. Make your changes and commit them following the Conventional Commits specification.
+4. Run tests and linting to ensure everything is working: `npm run lint`.
+5. Push your changes to your fork.
+6. Submit a pull request to the main repository.
 
 ### Pull Request Guidelines
 
