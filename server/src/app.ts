@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
@@ -16,8 +16,8 @@ app.use(express.json());
 
 app.use('/api', routes);
 
-app.get('/', (req, res) => {
-  res.json({ 
+app.get('/', (req: Request, res: Response) => {
+  return res.json({ 
     message: 'CertifyPro API is active',
     version: '1.0.0'
   });
