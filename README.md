@@ -98,6 +98,12 @@ cd server && npm install && npm run dev &
 cd ../client && npm install && npm run dev
 ```
 
+## Roadmap
+- [x] Multi-template support
+- [ ] Direct integration with Google Sheets
+- [ ] Real-time email delivery analytics dashboard
+- [ ] Multi-lingual certificate generation
+
 ## Frequently Asked Questions
 - **How many certificates can I generate in a single batch?**
   Depending on your server configuration, you can typically generate up to 500 certificates per CSV upload.
