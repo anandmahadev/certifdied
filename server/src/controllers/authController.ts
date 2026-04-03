@@ -6,6 +6,11 @@ const generateToken = (id: string) => {
   return jwt.sign({ id }, process.env.JWT_SECRET || 'supersecretkey', { expiresIn: '1d' });
 };
 
+/**
+ * Registers a new user and returns a JWT token.
+ * @param req Request object containing email and password.
+ * @param res Response object.
+ */
 export const signup = async (req: Request, res: Response) => {
   const { email, password } = req.body;
   try {
@@ -14,12 +19,17 @@ export const signup = async (req: Request, res: Response) => {
 
     const user = await User.create({ email, password });
     const token = generateToken((user._id as any).toString());
-    res.status(201).json({ user: { id: user._id, email: user.email }, token });
+    return res.status(201).json({ user: { id: user._id, email: user.email }, token });
   } catch (err: any) {
-    res.status(500).json({ message: err.message });
+    return res.status(500).json({ message: err.message });
   }
 };
 
+/**
+ * Authenticates a user and returns a JWT token.
+ * @param req Request object containing email and password.
+ * @param res Response object.
+ */
 export const login = async (req: Request, res: Response) => {
   const { email, password } = req.body;
   try {
@@ -30,8 +40,8 @@ export const login = async (req: Request, res: Response) => {
     if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
     const token = generateToken((user._id as any).toString());
-    res.json({ user: { id: user._id, email: user.email }, token });
+    return res.json({ user: { id: user._id, email: user.email }, token });
   } catch (err: any) {
-    res.status(500).json({ message: err.message });
+    return res.status(500).json({ message: err.message });
   }
 };
