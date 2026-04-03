@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Template management system with dynamic field mapping.
 - Modern dashboard UI with Next.js 15.
 - Core authentication system with JWT.
+- Integrated .editorconfig for cross-platform editor consistency.
+- Expanded CONTRIBUTING.md with conventional commit standards.
+- Added JSDoc documentation for all primary API controllers.
+- Enhanced server logging for improved development experience.
 
 ### Fixed
 - TypeScript issues in server controllers.
