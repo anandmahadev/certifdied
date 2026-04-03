@@ -14,7 +14,7 @@ mongoose.connect(config.mongodbUri)
     console.log('✅ Database Connected Successfully');
     console.log(`🚀 Server starting on port ${config.port}...`);
     app.listen(config.port, () => {
-      console.log(`Server is running on port ${config.port}`);
+      console.log(`Server is running at http://localhost:${config.port}`);
     });
   })
   .catch((err) => {
