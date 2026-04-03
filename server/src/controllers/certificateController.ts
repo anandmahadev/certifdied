@@ -5,6 +5,11 @@ import Certificate from '../models/Certificate.js';
 import { parse } from 'csv-parse';
 import fs from 'fs';
 
+/**
+ * Processes a batch of certificates based on a template and student data.
+ * @param req Request containing templateId and studentData.
+ * @param res Response with generation results.
+ */
 export const generateCertificates = async (req: Request, res: Response) => {
   const { templateId, studentData } = req.body; // studentData is an array from CSV
   try {
@@ -51,8 +56,8 @@ export const generateCertificates = async (req: Request, res: Response) => {
       }
     }
 
-    res.json({ message: 'Generation completed', results });
+    return res.json({ message: 'Generation completed', results });
   } catch (err: any) {
-    res.status(500).json({ message: err.message });
+    return res.status(500).json({ message: err.message });
   }
 };
