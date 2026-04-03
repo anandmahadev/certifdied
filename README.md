@@ -98,6 +98,12 @@ cd server && npm install && npm run dev &
 cd ../client && npm install && npm run dev
 ```
 
+## Frequently Asked Questions
+- **How many certificates can I generate in a single batch?**
+  Depending on your server configuration, you can typically generate up to 500 certificates per CSV upload.
+- **Can I use custom fonts for my templates?**
+  Yes, You can upload custom TTF fonts for branding consistency.
+
 ## License
 MIT
 
