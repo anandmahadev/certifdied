@@ -17,6 +17,12 @@ CertifyPro is an automated certificate generation and delivery platform designed
 - **Verification System**: Each certificate includes a unique ID and optional QR code for public verification.
 - **Modern Dashboard**: Intuitive interface for managing templates, students, and history.
 
+### Key Highlights
+- **Dynamic Field Mapping**: Map CSV headers directly to certificate placeholders via a simple UI.
+- **Secure Links**: Share certificates via encrypted links for added security.
+- **Email Tracking**: Monitor delivery status of all sent certificate emails.
+
+
 ## Architecture Overview
 
 CertifyPro follows a modern decoupled architecture:
