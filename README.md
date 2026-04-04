@@ -118,6 +118,10 @@ cd ../client && npm install && npm run dev
 - **Can I use custom fonts for my templates?**
   Yes, You can upload custom TTF fonts for branding consistency.
 
+## Security
+
+If you discover any security-related issues, please refer to our [Security Policy](SECURITY.md).
+
 ## License
 MIT
 
