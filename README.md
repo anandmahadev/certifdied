@@ -29,6 +29,13 @@ In today's fast-paced digital world, manual certificate generation and distribut
 - **Dynamic Field Mapping**: Map CSV headers directly to certificate placeholders via a simple UI.
 - **Secure Links**: Share certificates via encrypted links for added security.
 - **Email Tracking**: Monitor delivery status of all sent certificate emails.
+- **Auto-Formatting**: Automatically cleans up recipient names and emails for consistency.
+
+### Supported CSV Headers
+CertifyPro is flexible with CSV headers. The following fields are automatically detected:
+- **Names**: `name`, `Name`, `studentName`, `participantName`
+- **Emails**: `email`, `Email`, `studentEmail`, `participantEmail`
+- **Additional Data**: Any other column will be treated as a custom field for template placeholders.
 
 
 ## Architecture Overview
