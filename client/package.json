@@ -1,7 +1,9 @@
 {
   "name": "client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "Anand Mahadev",
+  "license": "MIT",
   "description": "Frontend for CertifyPro - Automated Certificate Generation Platform",
   "keywords": [
     "nextjs",
