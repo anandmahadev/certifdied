@@ -7,6 +7,13 @@ interface Recipient {
   [key: string]: string;
 }
 
+/**
+ * Parses a CSV file and converts it into an array of Recipient objects.
+ * 
+ * @param filePath - The absolute path to the CSV file to be parsed.
+ * @returns A promise that resolves to an array of Recipient objects.
+ * @throws An error if the file cannot be read or parsed.
+ */
 export const parseCSV = (filePath: string): Promise<Recipient[]> => {
   return new Promise((resolve, reject) => {
     const recipients: Recipient[] = [];
