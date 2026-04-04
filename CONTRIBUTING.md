@@ -25,3 +25,7 @@ If you find a bug or have a feature request, please open an issue on the GitHub 
 ## Security
 
 If you discover any security-related issues, please avoid using the public issue tracker. Instead, send an email to the repository owner.
+
+## Code of Conduct
+
+We are committed to providing a positive and inclusive environment for all contributors. Please be respectful and professional in your interactions with others.
