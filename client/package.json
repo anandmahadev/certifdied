@@ -15,9 +15,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "clean": "rm -rf .next"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf .next out node_modules"
   },
   "dependencies": {
     "next": "16.2.1",
