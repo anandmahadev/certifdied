@@ -19,13 +19,17 @@ export const generateCertificates = async (req: Request, res: Response) => {
     const fontBytes = await fs.promises.readFile('./src/assets/fonts/Inter.ttf').catch(() => null);
 
     const results = [];
+    
+    // Fetch template once outside the loop
+    const response = await fetch(template.imageUrl);
+    const templateBytes = await response.arrayBuffer();
+
     for (const student of studentData) {
       try {
-        const response = await fetch(template.imageUrl);
-        const templateBytes = await response.arrayBuffer();
         const pdfDoc = await PDFDocument.create();
         const isPdf = template.imageUrl.endsWith('.pdf');
         let image: any;
+        
         if (isPdf) {
           const pages = await pdfDoc.embedPdf(templateBytes);
           image = pages[0];
@@ -38,9 +42,9 @@ export const generateCertificates = async (req: Request, res: Response) => {
         page.drawImage(image as any, { x: 0, y: 0 });
 
         for (const field of template.fields) {
-          const key = field.key || '';
-          const text = student[key.replace(/{|}/g, '')] || '';
-          page.drawText(text, {
+          const key = (field.key || '').replace(/{|}/g, '');
+          const text = student[key] || '';
+          page.drawText(String(text), {
             x: field.x || 0,
             y: field.y || 0,
             size: field.size || 24,
@@ -49,10 +53,19 @@ export const generateCertificates = async (req: Request, res: Response) => {
         }
 
         const pdfBytes = await pdfDoc.save();
-        // Here you would upload to Cloudinary or save locally
-        results.push({ name: student.name, email: student.email, status: 'Generated' });
+        // TODO: Integration with Cloudinary/S3 for storage
+        results.push({ 
+          name: student.name || 'Unknown', 
+          email: student.email || 'N/A', 
+          status: 'Generated' 
+        });
       } catch (err: any) {
-        results.push({ name: student.name, email: student.email, status: 'Failed', error: err.message });
+        results.push({ 
+          name: student.name || 'Unknown', 
+          email: student.email || 'N/A', 
+          status: 'Failed', 
+          error: err.message 
+        });
       }
     }
 
