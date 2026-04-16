@@ -9,6 +9,9 @@
 ![Express](https://img.shields.io/badge/Express.js-5.0-lightgrey?style=for-the-badge&logo=express)
 ![MongoDB](https://img.shields.io/badge/MongoDB-8.0-47A248?style=for-the-badge&logo=mongodb)
 
+![Maintained](https://img.shields.io/badge/Maintained-Yes-blue?style=for-the-badge)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-April%202026-brightgreen?style=for-the-badge)
+
 CertifyPro is an enterprise-grade certificate generation and delivery platform. Designed for modern educational institutions, event organizers, and businesses, it automates the end-to-end lifecycle of digital credentials.
 
 ## Why CertifyPro?
