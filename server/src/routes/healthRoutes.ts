@@ -18,7 +18,12 @@ router.get('/', (req, res) => {
     services: {
       database: dbStatus,
       api: 'up',
-      uptime: process.uptime()
+      uptime: `${Math.floor(process.uptime())}s`,
+      memory: {
+        rss: `${Math.round(process.memoryUsage().rss / 1024 / 1024)}MB`,
+        heapTotal: `${Math.round(process.memoryUsage().heapTotal / 1024 / 1024)}MB`,
+        heapUsed: `${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`
+      }
     },
     version: '1.0.0'
   });
