@@ -4,6 +4,7 @@ import Template from '../models/Template.js';
 import Certificate from '../models/Certificate.js';
 import { parse } from 'csv-parse';
 import fs from 'fs';
+import { StudentData, GenerationResult } from '../types.js';
 
 /**
  * Processes a batch of certificates based on a template and student data.
@@ -18,13 +19,13 @@ export const generateCertificates = async (req: Request, res: Response) => {
 
     const fontBytes = await fs.promises.readFile('./src/assets/fonts/Inter.ttf').catch(() => null);
 
-    const results = [];
+    const results: GenerationResult[] = [];
     
     // Fetch template once outside the loop
     const response = await fetch(template.imageUrl);
     const templateBytes = await response.arrayBuffer();
 
-    for (const student of studentData) {
+    for (const student of studentData as StudentData[]) {
       try {
         const pdfDoc = await PDFDocument.create();
         const isPdf = template.imageUrl.endsWith('.pdf');
