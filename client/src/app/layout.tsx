@@ -5,8 +5,30 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CertifyPro - Automated Certificate Delivery",
-  description: "Generate and send personalized certificates automatically.",
+  title: {
+    default: "CertifyPro | Enterprise Certificate Automation",
+    template: "%s | CertifyPro"
+  },
+  description: "Enterprise-grade automated certificate generation and secure delivery platform for institutions and events.",
+  keywords: ["certificate generator", "automated delivery", "digital credentials", "bulk certificates", "PDF generation"],
+  authors: [{ name: "Anand Mahadev" }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://certifypro.vercel.app",
+    title: "CertifyPro - Automated Certificate Delivery",
+    description: "Generate and send personalized certificates automatically with enterprise-level security.",
+    siteName: "CertifyPro",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CertifyPro - Automated Certificate Delivery",
+    description: "Generate and send personalized certificates automatically.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({
