@@ -4,12 +4,17 @@ Thank you for your interest in contributing to CertifyPro!
 
 ## How to Contribute
 
-1. Fork the repository and clone it locally.
-2. Create a new branch for your feature or bugfix: `git checkout -b feature/my-feature`.
-3. Make your changes and commit them following the Conventional Commits specification.
-4. Run tests and linting to ensure everything is working: `npm run lint`.
-5. Push your changes to your fork.
-6. Submit a pull request to the main repository.
+1. **Fork and Clone**: Fork the repository and clone it to your local machine.
+2. **Branching**: Create a descriptive branch following the pattern `feat/`, `fix/`, or `docs/`.
+   - Example: `git checkout -b feat/google-sheets-integration`
+3. **Internal Structure**: 
+   - `client/`: Next.js 15 Frontend (App Router)
+   - `server/`: Express.js Backend (TypeScript)
+4. **Development**:
+   - Run `npm install` in both directories.
+   - Use `npm run dev` to start hot-reloading servers.
+5. **Commits**: Follow [Conventional Commits](https://www.conventionalcommits.org/).
+6. **Submit PR**: Open a pull request against the `master` branch.
 
 ### Pull Request Guidelines
 
