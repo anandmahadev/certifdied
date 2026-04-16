@@ -8,7 +8,22 @@ This client provides the user interface for managing automated certificate gener
 
 - **Next.js 15+**: Modern web framework with App Router support.
 - **TailwindCSS**: Utility-first CSS framework for rapid UI development.
-- **TypeScript**: Ensuring type safety throughout the codebase.
+- **Lucide Icons**: Beautiful, consistent icon set.
+- **Next Font (Inter)**: Optimized typography for readability.
+
+## Features implemented
+
+- **Dynamic Template Editor**: Visual interface for mapping CSV fields to PDF coordinates.
+- **Bulk CSV Upload**: Process hundreds of certificates with drag-and-drop.
+- **Real-time Preview**: Instant feedback on how certificates will look.
+- **Responsive Dashboard**: Fully mobile-responsive management interface.
+
+## Project Structure
+
+- `src/app/`: Next.js App Router pages and layouts.
+- `src/components/`: Reusable UI components (Modals, Forms, Charts).
+- `src/hooks/`: Custom React hooks for API interaction.
+- `src/lib/`: Utility functions and shared configuration.
 
 ## Getting Started
 
