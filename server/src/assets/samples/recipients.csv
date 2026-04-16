@@ -1,0 +1,6 @@
+name,email,course,date,grade
+John Doe,john.doe@example.com,Python Advanced,2026-04-16,A
+Jane Smith,jane.smith@example.com,React Masterclass,2026-04-15,A+
+Robert Johnson,robert.j@example.com,Node.js Backend,2026-04-14,B
+Emily Davis,emily.d@example.com,UI/UX Design,2026-04-13,A
+Michael Wilson,m.wilson@example.com,Cloud Architecture,2026-04-12,A
